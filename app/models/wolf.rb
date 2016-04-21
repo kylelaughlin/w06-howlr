@@ -8,4 +8,6 @@ class Wolf < ActiveRecord::Base
   validates :image, presence: true
   validates :description, presence: true
 
+  has_many :howls
+
 end
