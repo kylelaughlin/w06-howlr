@@ -6,3 +6,20 @@
 # For example:
 #
 # Insect.create!(name: "Fuzzy Mantis", description: "Really Fierce")
+
+Wolf.create(name: "Frank",
+            image: "https://lh4.ggpht.com/FLJJCQyyW7qtlrfWAlwtt3ndXzXUNtup6LSC49bjwfhEn8aTiHJOblXor1GeQLGH6A=w300",
+            description: "I have an insatiable appetite for sweet tarts."
+)
+Wolf.create(name: "Lou",
+            image: "http://endlessfacts.com/upload/img/Z8VZD14416962592.jpg",
+            description: "I have exquisite taste for fine wines and raw rabbits."
+)
+Wolf.create(name: "Jess",
+            image: "https://s-media-cache-ak0.pinimg.com/736x/c8/62/9d/c8629da6f824ba90636dfb909bce20f8.jpg",
+            description: "I enjoy long walks in the tundra."
+)
+Wolf.create(name: "Herb",
+            image: "http://www.thinkgeek.com/images/products/frontsquare/hrrp_wolf_mask.jpg",
+            description: "I am a wolf...I live life dangerously"
+)
