@@ -1,4 +1,4 @@
-class CreateHowlsTable < ActiveRecord::Migrate
+class CreateHowlsTable < ActiveRecord::Migration
   def change
     create_table :howls do |t|
       t.string :howl_text
