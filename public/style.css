@@ -26,6 +26,8 @@ body {
   margin: 0;
   font-size: 1.8em;
   padding: 10px;
+  color: #FFF;
+  text-decoration: none;
 }
 
 /* Wolf Count */
@@ -153,7 +155,7 @@ body {
   color: #FFF;
   padding: 5px 15px 5px 15px;
   border-radius: 2px;
-  margin: 10px 0px 20px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 .new-howl {
