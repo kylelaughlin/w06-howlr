@@ -1,1 +1,17 @@
-<h1>Howlr</h1>
+<div class="container">
+  <!-- Top Howlr button -->
+  <div class="howlr-header text-center">
+    <h1 class="howlr-header-text">Howlr</h1>
+  </div>
+
+  <!-- Number in Pack -->
+  <div class="text-center">
+    <h2>You have <%=@wolves.count%> wolves in your pack</h2>
+  </div>
+
+  <div>
+    <% @wolves.each do |w| %>
+      <img style="border-radius: 50%;" src="<%=w.image%>">
+    <% end %>
+  </dv>
+</div>
