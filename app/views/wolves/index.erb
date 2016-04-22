@@ -6,12 +6,26 @@
 
   <!-- Number in Pack -->
   <div class="text-center">
-    <h2>You have <%=@wolves.count%> wolves in your pack</h2>
+    <h2 class="wolf-count-text">You have <%=@wolves.count%> wolves in your pack</h2>
   </div>
 
   <div>
     <% @wolves.each do |w| %>
-      <img style="border-radius: 50%;" src="<%=w.image%>">
+      <div class="wolf-container clearfix">
+        <div class="wolf-image-wrapper">
+          <img class="wolf-image" style="border-radius: 50%;" src="<%=w.image%>">
+        </div>
+        <div class="wolf-bio-container">
+          <div class="wolf-name-wrapper clearfix">
+            <p class="wolf-name"><%=w.name%></p>
+            <p class="wolf-howls-count"><%=w.howls.count%> howls</p>
+          </div>
+          <div class="wolf-description-wrapper">
+            <p class="wolf-description"><%=w.description%></p>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </dv>
+  </div>
+  <a href="#" class="new-wolf-button">New Pack Member</a>
 </div>
