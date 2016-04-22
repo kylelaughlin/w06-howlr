@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2) do
+ActiveRecord::Schema.define(version: 3) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "howls", force: :cascade do |t|
-    t.string   "howl_text"
-    t.string   "howl_image"
+    t.string   "content"
+    t.string   "image"
     t.integer  "wolf_id"
     t.datetime "created_at"
     t.datetime "updated_at"

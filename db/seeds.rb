@@ -23,3 +23,9 @@ Wolf.create(name: "Herb",
             image: "http://www.thinkgeek.com/images/products/frontsquare/hrrp_wolf_mask.jpg",
             description: "I am a wolf...I live life dangerously"
 )
+
+Howl.create(content: "Hey guys, new to the pack.  Whats up?", wolf_id: 1)
+Howl.create(content: "Selfie! Check out these teeth.",
+            image: "http://img2-ak.lst.fm/i/u/300x300/3a8fa86166ed421ba6fc9cb0ad213584.jpg",
+            wolf_id: 3)
+Howl.create(content: "Aaaroooooh", wolf_id: 4)
