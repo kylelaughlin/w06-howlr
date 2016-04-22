@@ -6,9 +6,9 @@
 
 class Howl < ActiveRecord::Base
 
-  validates :howl_text, presence: true
+  validates :content, presence: true
   validates :wolf_id, presence: true
 
   belongs_to :wolf
-  
+
 end
