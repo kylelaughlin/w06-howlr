@@ -7,7 +7,7 @@ body {
   padding: 0px 5px 0px 5px;
 }
 
-.wolf-list-container {
+.list-container {
   max-width: 325px;
   margin: auto;
 }
@@ -66,6 +66,7 @@ body {
 
 .wolf-name-wrapper {
   width: 100%;
+  padding: 10px;
 }
 
 .wolf-name {
@@ -143,4 +144,95 @@ body {
   border-color: #F1F1F1;
   border-width: 1px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+/* Howls Nav Buttons */
+
+.nav-button {
+  background-color: #B71C1C;
+  color: #FFF;
+  padding: 5px 15px 5px 15px;
+  border-radius: 2px;
+  margin: 10px 0px 20px 0px;
+}
+
+.new-howl {
+  float: left;
+}
+
+.see-pack {
+  float: right;
+}
+
+/* Howls list */
+
+.howls-list-container {
+  margin: 0;
+  padding: 10px;
+}
+
+.howl-container {
+  margin: 0;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border-style: solid;
+  border-color: #F1F1F1;
+  border-width: 1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.howl-wrapper {
+  width: 100%;
+  margin: 0;
+}
+
+.howl-header {
+  width: 100%
+  margin:0;
+  padding: 0;
+}
+
+.howl-name-wrapper {
+  width: 50%;
+  margin: 0px;
+  display: inline;
+  position:relative;
+}
+
+.howl-name {
+  margin: 0;
+  display: inline;
+  position: absolute;
+  top:10px;
+  font-weight: 200;
+}
+
+.howl-day {
+  margin-right: 9px;
+  margin-top:15px;
+  display: inline;
+  float: right;
+  color: #7C7C84;
+  font-size: 1.2em;
+  text-align: right;
+}
+
+.howl-wolf-image-wrapper {
+  width: 40px;
+  margin: 0;
+  float: right;
+}
+
+.howl-content-wrapper {
+  width: 100%;
+  border-bottom-style: solid;
+  border-bottom-color: #F1F1F1;
+  border-bottom-width: 1px;
+}
+
+.howl-link {
+  color: #FFB44C;
+  margin-top: 20px;
+  margin-right: 20px;
 }
