@@ -28,6 +28,9 @@
             </div>
             <p class="howl-day">Today</p>
           </div>
+          <% if !h.image.nil? %>
+            <img src="<%=h.image%>" class="howl-image">
+          <% end %>
           <div class="howl-content-wrapper">
             <p class="howl-content"><%=h.content%></p>
           </div>

@@ -5,29 +5,24 @@
       <a class="howlr-header-text" href="/howls">Howlr</a>
     </div>
 
-    <!-- Number in Pack -->
-    <div class="text-center">
-      <h2 class="wolf-count-text">You have <%=@wolves.count%> wolves in your pack</h2>
-    </div>
+    <% if @howl.errors.any? %>
+      <div class="error-box">
+        <% @howl.errors.full_messages.each do |m| %>
+        <p class="error-message"><%=m%></p>
+        <% end %>
+      </div>
+    <% end %>
 
-    <div>
-      <% @wolves.each do |w| %>
-        <div class="wolf-container clearfix">
-          <div class="wolf-image-wrapper">
-            <img class="wolf-image" src="<%=w.image%>">
-          </div>
-          <div class="wolf-bio-container">
-            <div class="wolf-name-wrapper clearfix">
-              <p class="wolf-name"><%=w.name%></p>
-              <p class="wolf-howls-count"><%=w.howls.count%> howls</p>
-            </div>
-            <div class="wolf-description-wrapper">
-              <p class="wolf-description"><%=w.description%></p>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-    <a href="/wolves/new" class="new-wolf-button">New Pack Member</a>
+    <form class="new-form" action="/howls" method="post">
+      <input class="form-input" type="text" name="content" placeholder="What are you howling about?">
+      <input class="form-input" type="text" name="image" placeholder="Wanna share a picture? (optional)">
+      <select class="wolf-select" name="wolf_id">
+        <% @wolves.each do |w| %>
+          <option value="<%=w.id%>"><%=w.name%></option>
+        <% end %>
+      </select>
+      <input class="wolf-submit-button" type="submit" value="Howl">
+    </form>
+    <a href="/howls" class="back-to-wolves-button">Back</a>
   </div>
 </div>
