@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="list-container">
+    <!-- Top Howlr button -->
+    <div class="howlr-header text-center">
+      <h1 class="howlr-header-text">Howlr</h1>
+    </div>
+
+    <!-- Nav Buttons -->
+    <div class="howl-nav-wrapper">
+      <a class="nav-button new-howl" href="/howls/new">NEED TO HOWL</a>
+      <a class="nav-button see-pack" href="/wolves">SEE THE PACK</a>
+    </div>
+
+    <div class="text-center">
+      <h3>Here are the last five howls from your pack:</h3>
+    </div>
+
+    <!-- Howls -->
+    <div class="howls-list-container">
+      <% @howls.each do |h| %>
+        <div class="howl-container clearfix">
+          <div class="howl-header clearfix">
+            <div class="howl-name-wrapper">
+              <h3 class="howl-name"><%=h.wolf.name%></h3>
+            </div>
+            <div class="howl-wolf-image-wrapper">
+              <img class="wolf-image" src="<%=h.wolf.image%>">
+            </div>
+            <p class="howl-day">Today</p>
+          </div>
+          <div class="howl-content-wrapper">
+            <p class="howl-content"><%=h.content%></p>
+          </div>
+          <a class="howl-link" href="#">Howl Back (0)</a>
+          <a class="howl-link" href="#">Like (0)</a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
