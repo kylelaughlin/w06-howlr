@@ -7,6 +7,11 @@ body {
   padding: 0px 5px 0px 5px;
 }
 
+.wolf-list-container {
+  max-width: 325px;
+  margin: auto;
+}
+
 /* Main Header for howler */
 
 .howlr-header {
