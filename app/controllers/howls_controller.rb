@@ -1,5 +1,5 @@
 get '/howls' do
-  @howls = Howl.all.order(created_at: :DESC).limit(5)
+  @howls = Howl.where(original_howl_id: nil).order(created_at: :DESC).limit(5)
   erb :"howls/index"
 end
 
@@ -17,4 +17,10 @@ post '/howls' do
   else
     erb :"howls/new"
   end
+end
+
+get '/howls/:id/replies' do
+  @howl = Howl.find_by_id(params['id'])
+  @replies = @howl.replies
+  erb :"howls/replies"
 end

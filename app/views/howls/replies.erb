@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="list-container">
+    <!-- Top Howlr button -->
+    <div class="howlr-header text-center">
+      <a class="howlr-header-text" href="/howls">Howlr</a>
+    </div>
+
+    <div class="howls-list-container original-howl">
+      <!-- Original Howl -->
+      <div class="howl-container clearfix">
+        <div class="howl-header clearfix">
+          <div class="howl-name-wrapper">
+            <h3 class="howl-name"><%=@howl.wolf.name%></h3>
+          </div>
+          <div class="howl-wolf-image-wrapper">
+            <img class="wolf-image" src="<%=@howl.wolf.image%>">
+          </div>
+          <p class="howl-day"><%=@howl.days_since_howl%></p>
+        </div>
+        <% if !@howl.image.nil? %>
+          <img src="<%=@howl.image%>" class="howl-image">
+        <% end %>
+        <div class="howl-content-wrapper">
+          <p class="howl-content"><%=@howl.content%></p>
+        </div>
+        <p class="howl-link make-inline">Howl Back (<%=@howl.replies.count%>)</p>
+        <a class="howl-link" href="#">Like (0)</a>
+      </div>
+      <div class="reply-header">
+        <h5>Howl Backs:</h5>
+      </div>
+      <!-- Replies -->
+      <% @replies.each do |r| %>
+        <div class="howl-reply-container clearfix">
+          <div class="howl-header clearfix">
+            <div class="howl-name-wrapper">
+              <h3 class="howl-name"><%=@howl.replies.first.wolf.name%></h3>
+            </div>
+            <div class="howl-wolf-image-wrapper">
+              <img class="wolf-image" src="<%=r.wolf.image%>">
+            </div>
+            <p class="howl-day"><%=r.days_since_howl%></p>
+          </div>
+          <% if !r.image.nil? %>
+            <img src="<%=r.image%>" class="howl-image">
+          <% end %>
+          <div class="howl-content-wrapper">
+            <p class="howl-content"><%=r.content%></p>
+          </div>
+          <a class="howl-link" href="#">Like (0)</a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
