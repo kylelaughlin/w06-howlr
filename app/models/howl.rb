@@ -48,10 +48,11 @@ class Howl < ActiveRecord::Base
   #
   # Returns an integer representing the number of likes a howl has
   def up_likes
-    binding.pry
-    likes += 1
-    binding.pry
+    self.likes += 1
   end
 
+  def json_likes
+    "#{self.likes}"
+  end
 
 end

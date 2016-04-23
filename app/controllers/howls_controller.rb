@@ -55,9 +55,8 @@ get '/howls/test/:id' do
 end
 
 post '/howls/like' do
-
   @howl =Howl.find_by_id(params['howl_id'])
-  binding.pry
   @howl.up_likes
-  halt 200, {likes => @howl.likes}.to_json
+  @howl.save
+  @howl.json_likes
 end

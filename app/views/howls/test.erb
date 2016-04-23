@@ -19,7 +19,8 @@ function myOtherFunction() {
   var postData = {howl_id: howlId};
   alert(postData);
   $.ajax({url: "/howls/like", method: "post", data: postData, success: function(result){
-            $("#like").html(result);
-        }});
+    $("#like").html(result);}
+            //$("#like").html(result);
+        });
 }
 </script>
