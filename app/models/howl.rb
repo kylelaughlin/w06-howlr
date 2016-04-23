@@ -11,6 +11,9 @@ class Howl < ActiveRecord::Base
 
   belongs_to :wolf
 
+  has_many :replies, class_name: "Howl", foreign_key: "original_howl_id"
+  belongs_to :original_howl, class_name: "Howl"
+
   # Finds the number of days between the current date (today) and the day the
   # => howl was created and returns the appropriate string.
   #
