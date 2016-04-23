@@ -24,3 +24,27 @@ get '/howls/:id/replies' do
   @replies = @howl.replies
   erb :"howls/replies"
 end
+
+get '/howls/:id/replies/new' do
+  @howl = Howl.find_by_id(params['id'])
+  @wolves = Wolf.all.order('name')
+  erb :"howls/new_reply"
+end
+
+post '/howls/:id/replies' do
+  if params['image'].empty?
+    image = nil
+  else
+    image = "params['image']"
+  end
+  @howl = Howl.new(content: params['content'],
+                   image: image,
+                   wolf_id: params['wolf_id'],
+                   original_howl_id: params['id'])
+  if @howl.save
+    redirect to("/howls/#{params['id']}/replies")
+  else
+    @wolves = Wolf.all.order('name')
+    erb :"howls/new_reply"
+  end
+end

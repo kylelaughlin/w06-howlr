@@ -34,7 +34,7 @@
         <div class="howl-reply-container clearfix">
           <div class="howl-header clearfix">
             <div class="howl-name-wrapper">
-              <h3 class="howl-name"><%=@howl.replies.first.wolf.name%></h3>
+              <h3 class="howl-name"><%=r.wolf.name%></h3>
             </div>
             <div class="howl-wolf-image-wrapper">
               <img class="wolf-image" src="<%=r.wolf.image%>">
@@ -51,5 +51,7 @@
         </div>
       <% end %>
     </div>
+    <a href="/howls/<%=@howl.id%>/replies/new" class="new-wolf-button">Howl Back</a>
+    <a href="/howls" class="back-button">Back</a>
   </div>
 </div>
