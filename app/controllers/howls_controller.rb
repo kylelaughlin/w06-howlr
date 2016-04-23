@@ -48,3 +48,16 @@ post '/howls/:id/replies' do
     erb :"howls/new_reply"
   end
 end
+
+get '/howls/test/:id' do
+  @howl = Howl.find_by_id(params['id'])
+  erb :"howls/test"
+end
+
+post '/howls/like' do
+
+  @howl =Howl.find_by_id(params['howl_id'])
+  binding.pry
+  @howl.up_likes
+  halt 200, {likes => @howl.likes}.to_json
+end

@@ -3,6 +3,8 @@
 #wolf_id: an integer representing the id of the wolf that made the howl
 #created_at: a datetime object representing the time at which a howl was created
 #updated_at: a datetime object represtning the time at which a howl was updated_at
+#original_howl_id: an integer representing the id of the original howl (if howl is a howl back)
+#likes: an integer representing how many likes a howl has received
 
 class Howl < ActiveRecord::Base
 
@@ -41,5 +43,15 @@ class Howl < ActiveRecord::Base
       "Long Ago"
     end
   end
+
+  # Increases a howls likes by one
+  #
+  # Returns an integer representing the number of likes a howl has
+  def up_likes
+    binding.pry
+    likes += 1
+    binding.pry
+  end
+
 
 end
