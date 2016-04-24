@@ -17,6 +17,7 @@
       <input class="form-input" type="text" name="content" placeholder="What are you howling back about?">
       <input class="form-input" type="text" name="image" placeholder="Wanna share a picture? (optional)">
       <select class="wolf-select" name="wolf_id">
+        <option value="" disabled selected hidden>Please Choose a Wolf</option>
         <% @wolves.each do |w| %>
           <option value="<%=w.id%>"><%=w.name%></option>
         <% end %>

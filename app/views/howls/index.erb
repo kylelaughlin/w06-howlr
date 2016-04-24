@@ -1,4 +1,28 @@
 <div class="container">
+
+  <div class="wolf-listing">
+
+    <div class="large-wolf-wrapper">
+      <h3 class="text-center">Your Pack:</h3>
+      <% @wolves.each do |w| %>
+        <div class="wolf-container clearfix">
+          <div class="wolf-image-wrapper">
+            <img class="wolf-image" src="<%=w.image%>">
+          </div>
+          <div class="wolf-bio-container">
+            <div class="wolf-name-wrapper clearfix">
+              <p class="wolf-name"><%=w.name%></p>
+              <p class="wolf-howls-count"><%=w.howls.count%> howls</p>
+            </div>
+            <div class="wolf-description-wrapper">
+              <p class="wolf-description"><%=w.description%></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
   <div class="list-container">
     <!-- Top Howlr button -->
     <div class="howlr-header text-center">

@@ -1,5 +1,6 @@
 get '/howls' do
   @howls = Howl.where(original_howl_id: nil).order(created_at: :DESC).limit(5)
+  @wolves = Wolf.all.order('name')
   erb :"howls/index"
 end
 
