@@ -1,16 +1,13 @@
-function myFunction() {
-    document.getElementById("demo").innerHTML = "Hello World";
-}
+$(document).ready(function() {
 
-document.getElementById("like-link").onclick = myOtherFunction;
-
-function myOtherFunction() {
-  var target = document.getElementById("like-link");
-  var howlId = target.getAttribute("value");
-  var postData = {howl_id: howlId};
-  alert(postData);
-  $.ajax({url: "/howls/like", method: "post", data: postData, success: function(result){
-    $("#likes").html(result);}
-            //$("#like").html(result);
+    $('p.howl-link').click(function() {
+        var elm = $(this).eq(0);
+        var howlId = this.getAttribute("value");
+        var postData = {howl_id: howlId};
+        $.ajax({url: "/howls/like", method: "post", data: postData, success: function(result){
+          elm.html("Likes (" + result + ")")
+          }
         });
-}
+    });
+
+});
