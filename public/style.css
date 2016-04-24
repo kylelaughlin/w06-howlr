@@ -1,7 +1,17 @@
 body {
   padding:0;
   margin: 0;
+  margin-right: auto;
+  margin-left: auto;
   font-family: 'Lato', sans-serif;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+img {
+  border: 0;
 }
 
 .container {
@@ -26,14 +36,19 @@ body {
   max-width:325px;
   margin: auto;
   margin-top: 0;
+  padding: 3px;
   background-color: #EE6E73;
   color: #FFF;
+}
+
+.wolf-header {
+  padding: 11px;
 }
 
 .howlr-header-text {
   margin: 0;
   font-size: 1.8em;
-  padding: 20px;
+  padding: 8px;
   color: #FFF;
   text-decoration: none;
 }
@@ -56,8 +71,8 @@ body {
 }
 
 .wolf-image-wrapper {
-  width: 65px;
-  height: 65px;
+  width: 46px;
+  height: 46px;
   margin: 0;
   padding: 5px 0px 0px 10px;
   float: left;
@@ -78,7 +93,7 @@ body {
 
 .wolf-name-wrapper {
   width: 100%;
-  padding: 10px;
+  padding-bottom: 5px;
 }
 
 .wolf-name {
@@ -92,6 +107,7 @@ body {
   float: right;
   color: #6F6A6F;
   margin: 0;
+  margin-right: 5px;
 }
 
 .wolf-description-wrapper{
@@ -116,16 +132,6 @@ body {
 
 /* New Wolf Form */
 
-.form-input {
-  border-style: none;
-  border-bottom-style: solid;
-  border-bottom-color: #F1F1F1;
-  border-bottom-width: 2px;
-  width: 100%;
-  padding: 5px;
-  margin-top: 20px;
-  font-size: 0.8em;
-}
 
 .wolf-submit-button {
   background-color: #B71C1C;
@@ -144,6 +150,7 @@ body {
   float: left;
   border-radius: 2px;
   padding: 5px 15px 5px 15px;
+  text-decoration: none;
 }
 
 .error-box {
@@ -166,6 +173,7 @@ body {
   padding: 5px 15px 5px 15px;
   border-radius: 2px;
   margin: 10px 0px 0px 0px;
+  text-decoration: none;
 }
 
 .new-howl {
@@ -187,7 +195,6 @@ body {
   margin: 0;
   margin-top: 10px;
   padding: 10px;
-  width: 100%;
   border-style: solid;
   border-color: #F1F1F1;
   border-width: 1px;
@@ -273,7 +280,7 @@ body {
   border-bottom-style: solid;
   border-bottom-color: #F1F1F1;
   border-bottom-width: 2px;
-  width: 100%;
+  width: 95%;
   padding: 5px;
   margin-top: 20px;
   font-size: 0.8em;
