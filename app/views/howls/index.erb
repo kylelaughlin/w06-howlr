@@ -63,8 +63,6 @@ $(document).ready(function() {
         var elm = $(this).eq(0);
         var howlId = this.getAttribute("value");
         var postData = {howl_id: howlId};
-        alert(elm.html());
-        alert(this.getAttribute("value"));
         $.ajax({url: "/howls/like", method: "post", data: postData, success: function(result){
           elm.html("Likes (" + result + ")")
           }
