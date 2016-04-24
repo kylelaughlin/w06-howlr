@@ -1,19 +1,13 @@
-<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
 
-<button onclick="myFunction()">Click me</button>
 
-<p id="demo"></p>
 
 <p id="p1" value="<%=@howl.id%>">Like (<span id="like">0</span>)</p>
 
 <script>
-function myFunction() {
-    document.getElementById("demo").innerHTML = "Hello World";
-}
+$(document).ready(function(){
+document.getElementById("p1").onclick = myOtherFunction();
 
-document.getElementById("p1").onclick = myOtherFunction;
-
-function myOtherFunction() {
+function myOtherFunction(elm) {
   var target = document.getElementById("p1");
   var howlId = target.getAttribute("value");
   var postData = {howl_id: howlId};
@@ -23,4 +17,5 @@ function myOtherFunction() {
             //$("#like").html(result);
         });
 }
+});
 </script>

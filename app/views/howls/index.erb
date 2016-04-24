@@ -35,9 +35,24 @@
             <p class="howl-content"><%=h.content%></p>
           </div>
           <a class="howl-link" href="/howls/<%=h.id%>/replies">Howl Back (<%=h.replies.count%>)</a>
-          <p id="like-link" class="howl-link" href="#">Like (<span id="likes"><%=h.likes%></span>)</p>
+          <p id="like-link" data-id="howl-<%=h.id%>" value="<%=h.id%>" class="howl-link">Like (<span id="likes"><%=h.likes%></span>)</p>
         </div>
       <% end %>
     </div>
   </div>
 </div>
+
+<script>
+document.getElementById("like-link").onclick = myOtherFunction;
+
+function myOtherFunction() {
+  var target = document.getElementById("like-link");
+  var howlId = target.getAttribute("value");
+  var postData = {howl_id: howlId};
+  alert(postData);
+  $.ajax({url: "/howls/like", method: "post", data: postData, success: function(result){
+    $("#likes").html(result);}
+            //$("#like").html(result);
+        });
+}
+</script>
