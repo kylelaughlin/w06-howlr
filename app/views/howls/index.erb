@@ -43,6 +43,7 @@
 </div>
 
 <script>
+/*
 document.getElementById("like-link").onclick = myOtherFunction;
 
 function myOtherFunction() {
@@ -54,5 +55,17 @@ function myOtherFunction() {
     $("#likes").html(result);}
             //$("#like").html(result);
         });
-}
+}*/
+
+$(document).ready(function() {
+    $('p.howl-link').click(function() {
+        var howlId = this.getAttribute("value");
+        var postData = {howl_id: howlId};
+        alert(postData);
+        $.ajax({url: "/howls/like", method: "post", data: postData, success: function(result){
+          $this.children()[0].html(result);
+          }
+        });
+    });
+});
 </script>
