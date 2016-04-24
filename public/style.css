@@ -364,4 +364,14 @@ img {
     background-color: #FFF;
     color: #000;
   }
+
+  .howl-nav-wrapper {
+    display: none;
+  }
+
+  .large-pack-button {
+    position: absolute;
+    bottom: -44px;
+    left: 115px;
+  }
 }
