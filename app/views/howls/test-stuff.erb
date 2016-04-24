@@ -17,3 +17,19 @@
       })
     })
 */
+
+
+
+$(document).ready(function() {
+
+    $('p.howl-link').click(function() {
+        var howlId = this.getAttribute("value");
+        var postData = {howl_id: howlId};
+        alert($(this).html());
+        $.ajax({url: "/howls/like", method: "post", data: postData, success: function(result){
+          alert($(this).html());
+          }
+        });
+    });
+
+});

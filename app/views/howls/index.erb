@@ -60,11 +60,13 @@ function myOtherFunction() {
 $(document).ready(function() {
 
     $('p.howl-link').click(function() {
+        var elm = $(this).eq(0);
         var howlId = this.getAttribute("value");
         var postData = {howl_id: howlId};
-        alert($(this).html());
+        alert(elm.html());
+        alert(this.getAttribute("value"));
         $.ajax({url: "/howls/like", method: "post", data: postData, success: function(result){
-          alert($(this).html());
+          elm.html("Likes (" + result + ")")
           }
         });
     });
