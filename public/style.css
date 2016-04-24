@@ -48,15 +48,17 @@ body {
 }
 
 .wolf-image-wrapper {
-  width: 23%;
+  width: 65px;
+  height: 65px;
   margin: 0;
-  padding: 5px 15px 0px 10px;
+  padding: 5px 0px 0px 10px;
   float: left;
+
 }
 
 .wolf-image {
-  border-radius: 50%;
   width: 100%;
+  border-radius: 50%;
 }
 
 .wolf-bio-container {
