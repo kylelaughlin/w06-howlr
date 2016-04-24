@@ -1,33 +1,11 @@
-/*
-    $(document).ready(function(){
-      $('#like-link').onclick(function(){
-
-
-        var howl_id = this.value
-        var postData = {id: howl_id}
-
-        $.ajax({
-          method: 'post',
-          url: '/howls/like',
-          data: postData,
-          success: function(returnedData){
-            $("#howl-likes").html(returnedData);
-          }
-
-      })
-    })
-*/
-
-
-
 $(document).ready(function() {
 
     $('p.howl-link').click(function() {
+        var elm = $(this).eq(0);
         var howlId = this.getAttribute("value");
         var postData = {howl_id: howlId};
-        alert($(this).html());
         $.ajax({url: "/howls/like", method: "post", data: postData, success: function(result){
-          alert($(this).html());
+          elm.html("Likes (" + result + ")")
           }
         });
     });
