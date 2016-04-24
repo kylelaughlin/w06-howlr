@@ -58,14 +58,16 @@ function myOtherFunction() {
 }*/
 
 $(document).ready(function() {
+
     $('p.howl-link').click(function() {
         var howlId = this.getAttribute("value");
         var postData = {howl_id: howlId};
-        alert(postData);
+        alert($(this).html());
         $.ajax({url: "/howls/like", method: "post", data: postData, success: function(result){
-          $this.children()[0].html(result);
+          alert($(this).html());
           }
         });
     });
+
 });
 </script>
