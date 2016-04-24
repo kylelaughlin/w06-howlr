@@ -30,7 +30,24 @@
       <h1 class="howlr-header-text">Howlr</h1>
     </div>
 
-    <!-- Nav Buttons -->
+    <!-- Large screen howl form -->
+    <div class="large-screen-howl-form">
+      <form class="new-form" action="/howls" method="post">
+        <input class="form-input hidden-form clickable" type="text" name="content" placeholder="What are you howling about?">
+        <div class="howl-hidden-form">
+          <input class="form-input hidden-form" type="text" name="image" placeholder="Wanna share a picture? (optional)">
+          <select class="wolf-select" name="wolf_id">
+            <option value="" disabled selected hidden>Please Choose a Wolf</option>
+            <% @wolves.each do |w| %>
+              <option value="<%=w.id%>"><%=w.name%></option>
+            <% end %>
+          </select>
+          <input class="wolf-submit-button" type="submit" value="Howl">
+        </div>
+      </form>
+    </div>
+
+    <!--Nav buttons -->
     <div class="howl-nav-wrapper clearfix">
       <a class="nav-button new-howl" href="/howls/new">NEED TO HOWL</a>
       <a class="nav-button see-pack" href="/wolves">SEE THE PACK</a>

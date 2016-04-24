@@ -167,6 +167,28 @@ img {
 
 /* Howls Nav Buttons */
 
+/* ##################################################################### */
+
+.large-screen-howl-form {
+  margin: 10px;
+  padding: 5px;
+  padding-left: 15px;
+  background-color: #EE6E73;
+  border-radius: 3px;
+  border-color: #F1F1F1;
+  border-width: 1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.howl-hidden-form {
+  margin-bottom: 60px;
+  display: none;
+}
+
+.hidden-form {
+  border-radius: 3px;
+}
+
 .nav-button {
   background-color: #B71C1C;
   color: #FFF;

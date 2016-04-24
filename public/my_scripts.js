@@ -10,4 +10,21 @@ $(document).ready(function() {
         });
     });
 
+    $('input.clickable').click(function(){
+      if($('div.howl-hidden-form').is(":hidden")){
+        $('div.howl-hidden-form').slideDown("medium");
+      }
+    });
+
+    $(document).click(function(){
+      $('div.howl-hidden-form').slideUp("medium");
+    });
+
+    $('div.howl-hidden-form').click(function(e){
+      e.stopPropagation();
+    });
+
+    $('.clickable').click(function(e){
+      e.stopPropagation();
+    });
 });
