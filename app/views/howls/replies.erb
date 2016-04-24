@@ -24,7 +24,7 @@
           <p class="howl-content"><%=@howl.content%></p>
         </div>
         <p class="howl-link make-inline">Howl Back (<%=@howl.replies.count%>)</p>
-        <a class="howl-link" href="#">Like (0)</a>
+        <p id="like-link" value="<%=@howl.id%>" class="howl-link make-inline">Like (<span id="likes"><%=@howl.likes%></span>)</p>
       </div>
       <div class="reply-header">
         <h5>Howl Backs:</h5>
@@ -47,7 +47,7 @@
           <div class="howl-content-wrapper">
             <p class="howl-content"><%=r.content%></p>
           </div>
-          <a class="howl-link" href="#">Like (0)</a>
+          <p id="like-link" value="<%=r.id%>" class="howl-link make-inline">Like (<span id="likes"><%=r.likes%></span>)</p>
         </div>
       <% end %>
     </div>

@@ -35,7 +35,7 @@
             <p class="howl-content"><%=h.content%></p>
           </div>
           <a class="howl-link" href="/howls/<%=h.id%>/replies">Howl Back (<%=h.replies.count%>)</a>
-          <p id="like-link" data-id="howl-<%=h.id%>" value="<%=h.id%>" class="howl-link">Like (<span id="likes"><%=h.likes%></span>)</p>
+          <p id="like-link" value="<%=h.id%>" class="howl-link make-inline">Like (<span id="likes"><%=h.likes%></span>)</p>
         </div>
       <% end %>
     </div>
