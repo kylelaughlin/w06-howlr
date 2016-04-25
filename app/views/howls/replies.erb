@@ -26,9 +26,11 @@
         <p class="howl-link make-inline">Howl Back (<%=@howl.replies.count%>)</p>
         <p id="like-link" value="<%=@howl.id%>" class="howl-link make-inline">Like (<span id="likes"><%=@howl.likes%></span>)</p>
       </div>
-      <div class="reply-header">
-        <h5>Howl Backs:</h5>
-      </div>
+      <% if !@replies.empty? %>
+        <div class="reply-header">
+          <h5>Howl Backs:</h5>
+        </div>
+      <% end %>
       <!-- Replies -->
       <% @replies.each do |r| %>
         <div class="howl-reply-container clearfix">
