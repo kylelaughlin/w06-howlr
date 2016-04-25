@@ -345,6 +345,7 @@ img {
 }
 
 @media screen and (min-width: 992px) {
+
   .container {
     position: relative;
     width: 900px;
@@ -359,7 +360,6 @@ img {
     width: 450px;
     margin: auto;
     max-width: 450px;
-
   }
 
   .wolf-listing {
